@@ -101,4 +101,4 @@ The deployment has Vercel authentication protection. The request results were ca
 - `@node-rs/bcrypt` 2.0.0
 - node-gyp 13.1.0
 
-The [earlier archived repro](https://github.com/karlhorky/repro-expo-router-api-routes-node-rs-bcrypt-assetexts) contains the original `assetExts` investigation and additional loader diagnostics.
+The [earlier repro](https://github.com/karlhorky/repro-expo-router-api-routes-node-rs-bcrypt-assetexts) contains the original `assetExts` investigation and additional loader diagnostics.
