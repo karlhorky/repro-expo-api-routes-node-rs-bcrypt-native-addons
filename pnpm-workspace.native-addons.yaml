@@ -1,0 +1,6 @@
+overrides:
+  "@expo/cli": 58.1.18
+  "@expo/metro-config": 58.0.20
+patchedDependencies:
+  "@expo/cli@58.1.18": patches/@expo__cli@58.1.18.patch
+  "@expo/metro-config@58.0.20": patches/@expo__metro-config@58.0.20.patch

@@ -1,0 +1,6 @@
+{"mode": "dev", "route": "hello", "status": 200, "body": {"message": "hello from native", "platform": "darwin", "arch": "arm64"}}
+{"mode": "dev", "route": "hash", "status": 200, "body": {"hash": "$2b$04$RjiLqfV6skjArOQe/UVl0eWeFjzdhTjjW7q67uUpdK0eylqIaAwS6", "verified": true, "platform": "darwin", "arch": "arm64"}}
+{"mode": "dev", "route": "hello-commonjs", "status": 200, "body": {"message": "hello from native"}}
+{"mode": "moved-export", "route": "hello", "status": 200, "body": {"message": "hello from native", "platform": "darwin", "arch": "arm64"}}
+{"mode": "moved-export", "route": "hash", "status": 200, "body": {"hash": "$2b$04$8TlI9pd3wHMKYfcB0raYx.ykKoHB6r2xxsCbNAguQQJdn3aTR1.0i", "verified": true, "platform": "darwin", "arch": "arm64"}}
+{"mode": "moved-export", "route": "hello-commonjs", "status": 200, "body": {"message": "hello from native"}}
