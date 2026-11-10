@@ -56,7 +56,7 @@ pnpm start
 
 `pnpm build` installs the pnpm patches in `patches/`, builds the hello addon, and exports the app. The patches apply the native-addon changes from Expo PR commit [`277d0aee21b057a9888ac38f573e00cdb405d558`](https://github.com/expo/expo/commit/277d0aee21b057a9888ac38f573e00cdb405d558) to `@expo/cli@58.1.18` and `@expo/metro-config@58.0.20`. The original compiled snapshots remain in `cli-patch/` and `metro-patch/` for the earlier investigation. Their Expo MIT license is in `LICENSE.expo`.
 
-To use these patches in another Expo SDK 58 app, copy `patches/` and merge `pnpm-workspace.native-addons.yaml` into the app's `pnpm-workspace.yaml`, then run `pnpm install`. No Metro configuration is needed.
+To use these patches in another Expo SDK 58 app, copy `patches/` and merge `pnpm-workspace.native-addons.yaml` into the app's `pnpm-workspace.yaml`, then run `pnpm install`. No Metro configuration is needed. See the [pnpm patch request results](logs/pnpm-patch-requests.txt), [Vercel results](logs/pnpm-patch-vercel-requests.txt), and [Expo example registration and login results](logs/pnpm-patch-example-auth.txt).
 
 Request the same three routes. They return HTTP 200 with the native hello message or a bcrypt hash and `verified: true`. See the [request results](logs/after-api-requests.txt) and [export output](logs/after-export.txt).
 

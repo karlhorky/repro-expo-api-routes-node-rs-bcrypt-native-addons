@@ -1,0 +1,10 @@
+{"port":8135,"route":"register","status":201,"sessionCookie":true}
+{"port":8135,"route":"login","status":200,"sessionCookie":true}
+{"port":8135,"route":"login","status":401,"sessionCookie":false}
+{"port":8135,"route":"login","status":200,"sessionCookie":true}
+{"mode":"dev","legacyHashes":true,"newHashes":true}
+{"port":8136,"route":"register","status":201,"sessionCookie":true}
+{"port":8136,"route":"login","status":200,"sessionCookie":true}
+{"port":8136,"route":"login","status":401,"sessionCookie":false}
+{"port":8136,"route":"login","status":200,"sessionCookie":true}
+{"mode":"export","legacyHashes":true,"newHashes":true}
