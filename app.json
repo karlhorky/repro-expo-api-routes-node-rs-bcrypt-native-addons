@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Native addon deployment repro",
+    "slug": "native-addon-deployment-repro",
+    "web": {
+      "output": "server"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+{"route": "hello", "status": 500, "error": "Unable to resolve module ../native/build/Release/hello.node"}
+{"route": "hash", "status": 500, "error": "Unable to resolve module ./bcrypt.wasi.cjs"}
+{"route": "hello-commonjs", "status": 500, "error": "Unable to resolve module ./build/Release/hello.node"}

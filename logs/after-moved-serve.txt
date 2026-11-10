@@ -1,0 +1,2 @@
+Starting server in /tmp/expo-bcrypt-new-repro-moved-output
+Server running at http://localhost:8124

@@ -1,0 +1,93 @@
+$ node scripts/build.cjs
+gyp info it worked if it ends with ok
+gyp info using node-gyp@13.1.0
+gyp info using node@24.13.0 | darwin | arm64
+gyp info chdir native
+gyp info find Python using Python version 3.9.6 found at "/Applications/Xcode.app/Contents/Developer/usr/bin/python3"
+
+gyp info spawn /Applications/Xcode.app/Contents/Developer/usr/bin/python3
+gyp info spawn args [
+gyp info spawn args '<repro>/node_modules/.pnpm/node-gyp@13.1.0/node_modules/node-gyp/gyp/gyp_main.py',
+gyp info spawn args 'binding.gyp',
+gyp info spawn args '-f',
+gyp info spawn args 'make',
+gyp info spawn args '-I',
+gyp info spawn args '<repro>/native/build/config.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '<repro>/node_modules/.pnpm/node-gyp@13.1.0/node_modules/node-gyp/addon.gypi',
+gyp info spawn args '-I',
+gyp info spawn args '/Users/k/Library/Caches/node-gyp/24.13.0/include/node/common.gypi',
+gyp info spawn args '-Dlibrary=shared_library',
+gyp info spawn args '-Dvisibility=default',
+gyp info spawn args '-Dnode_root_dir=/Users/k/Library/Caches/node-gyp/24.13.0',
+gyp info spawn args '-Dnode_gyp_dir=<repro>/node_modules/.pnpm/node-gyp@13.1.0/node_modules/node-gyp',
+gyp info spawn args '-Dnode_lib_file=/Users/k/Library/Caches/node-gyp/24.13.0/<(target_arch)/node.lib',
+gyp info spawn args '-Dmodule_root_dir=<repro>/native',
+gyp info spawn args '-Dnode_engine=v8',
+gyp info spawn args '--depth=.',
+gyp info spawn args '--no-parallel',
+gyp info spawn args '--generator-output',
+gyp info spawn args 'build',
+gyp info spawn args '-Goutput_dir=.'
+gyp info spawn args ]
+gyp info spawn make
+gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+  CC(target) Release/obj.target/hello/hello.o
+  SOLINK_MODULE(target) Release/hello.node
+gyp info ok
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Server rendering is enabled. Learn more: https://docs.expo.dev/router/web/server-rendering/
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundled 17811ms node_modules/.pnpm/@expo+router-server@58.0.20_@expo+metro-runtime@58.0.16_expo-constants@58.0.13_expo-fon_5dfb1129698ecce23c62b4a4d045c868/node_modules/@expo/router-server/node/render.js (825 modules)
+Web Bundled 18411ms node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/entry.js (772 modules)
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundled 250ms app/hash+api.js (5 modules)
+λ Bundled 7ms app/hello+api.js (1 module)
+λ Bundled 8ms app/hello-commonjs+api.js (1 module)
+λ Bundled 12ms node_modules/.pnpm/@expo+router-server@58.0.20_@expo+metro-runtime@58.0.16_expo-constants@58.0.13_expo-fon_5dfb1129698ecce23c62b4a4d045c868/node_modules/@expo/router-server/node/render.js (1 module)
+
+› Assets (18):
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/arrow_down.017bc6ba3fc25503e5eb5e53826d48a8.png (9.5KB)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/error.d1ea1496f9057eb392d5bbf3732a61b7.png (469B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/file.19eeb73b9593a38f8e9f418337fc7d10.png (138B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/forward.d8b800c443b8972542883e0b9de2bdc6.png (188B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/pkg.ab19f4cbc543357183a20571f68380a3.png (364B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/react-navigation/elements/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png (653B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/react-navigation/elements/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png (207B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/react-navigation/elements/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png (4 variations | 425B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/react-navigation/elements/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png (4 variations | 235B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/react-navigation/elements/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/sitemap.412dd9275b6b48ad28f5e3d81bb1f626.png (465B)
+node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/assets/unmatched.20e71bdf79e3a97bf55fd9e164041578.png (4.8KB)
+
+› web bundles (5):
+_expo/server/render.js (1.4MB)
+_expo/server/render.js.map (2.2MB)
+_expo/static/js/web/_layout-343a0dda4ff88a01a0dd1ed170d33e0f.js (18KB)
+_expo/static/js/web/entry-197b83bacb3c09ed42659c61a3d05624.js (1.1MB)
+_expo/static/js/web/index-cd5c09182f4c1f257369daf6f3d9481c.js (329B)
+
+› Files (3):
+_expo/native/500d2a668b027abf4febe8e173f8a5d0393bbab746ab269e88d917da65371bdc/bcrypt.darwin-arm64.node (522KB)
+_expo/native/5e6656c5125c0867bb06da417e8e870e9652fc89f5371be33683b703216d3c23/hello.node (51KB)
+_expo/routes.json (1.7KB)
+
+› API routes (3):
+/hash (29KB) (source map (28KB))
+/hello (4.4KB) (source map (6.1KB))
+/hello-commonjs (4.4KB) (source map (6.2KB))
+
+Exported: dist

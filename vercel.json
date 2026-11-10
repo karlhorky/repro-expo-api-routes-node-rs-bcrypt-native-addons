@@ -1,0 +1,17 @@
+{
+  "framework": null,
+  "buildCommand": "node scripts/build.cjs",
+  "outputDirectory": "dist/client",
+  "installCommand": "npx --yes pnpm@12.6.0 install --no-frozen-lockfile",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/server/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
+  ]
+}

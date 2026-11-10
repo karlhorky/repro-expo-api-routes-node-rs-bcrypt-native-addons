@@ -1,0 +1,106 @@
+Starting project at <repro>
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Waiting on http://localhost:8125
+
+An update for expo is available: 58.0.17 → ~58.0.23
+9 other packages may need updating. Run npx expo install --check for details.
+Logs for your project will appear below.
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundling failed 551ms app/hello+api.js (1 module)
+ ERROR  SyntaxError: <repro>/native/build/Release/hello.node: Unexpected character '�'. (1:0)
+
+> 1 | ����
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+    | ^
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+| (node:3380) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundling failed 293ms app/hash+api.js (5 modules)
+ ERROR  SyntaxError: <repro>/node_modules/.pnpm/@node-rs+bcrypt-darwin-arm64@2.0.0/node_modules/@node-rs/bcrypt-darwin-arm64/bcrypt.darwin-arm64.node: Unexpected character '�'. (1:0)
+
+> 1 | ����
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+    | ^
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+λ Bundled 88ms app/native-require+api.js (1 module)
+λ Bundling failed 7ms app/hello-asset+api.js (1 module)
+ ERROR  SyntaxError: <repro>/native/build/Release/hello.node: Unexpected character '�'. (1:0)
+
+> 1 | ����
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+    | ^
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]
+[binary code frame omitted]

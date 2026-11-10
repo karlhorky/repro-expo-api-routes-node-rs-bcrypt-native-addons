@@ -1,0 +1,69 @@
+Starting project at <repro>
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Waiting on http://localhost:8125
+
+Logs for your project will appear below.
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3285) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundling failed 553ms app/hello+api.js (1 module)
+Unable to resolve "../native/build/Release/hello.node" from "app/hello+api.js"
+> 1 | import { hello } from '../native/build/Release/hello.node';
+    |                        ^
+  2 |
+  3 | export function GET() {
+  4 |   return Response.json({ message: hello(), platform: process.platform, arch: process.arch });
+
+Import stack:
+
+ app/hello+api.js
+ | import "../native/build/Release/hello.node"
+
+
+ | import "<repro>/app/hello+api.js"
+
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundled 382ms app/hash+api.js (5 modules)
+
+Metro error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+
+Code: binding.js
+  701 | if (!nativeBinding) {
+  702 |   if (loadErrors.length > 0) {
+> 703 |     const error = new Error(
+      |                   ^
+  704 |       `Cannot find native binding. ` +
+  705 |         `npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). ` +
+  706 |         'Please try `npm i` again after removing both package-lock.json and node_modules directory.',
+Call Stack
+  <unknown> (node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js:703:19)
+  <unknown> (node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/index.js:3:3)
+  <unknown> (app/hash+api.js:1)
+λ Bundled 10ms app/native-require+api.js (1 module)
+λ Bundling failed 5ms app/hello-asset+api.js (1 module)
+Unable to resolve "../native/build/Release/hello.node" from "app/hello-asset+api.js"
+> 1 | import addon from '../native/build/Release/hello.node';
+    |                    ^
+  2 |
+  3 | export function GET() {
+  4 |   return Response.json({ type: typeof addon, value: addon });
+
+Import stack:
+
+ app/hello-asset+api.js
+ | import "../native/build/Release/hello.node"
+
+
+ | import "<repro>/app/hello-asset+api.js"

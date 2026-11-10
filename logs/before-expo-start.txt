@@ -1,0 +1,77 @@
+$ expo start --localhost --port 8123
+Starting project at <repro>
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+
+Waiting on http://localhost:8123
+
+Logs for your project will appear below.
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91453) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundling failed 661ms app/hello+api.js (1 module)
+Unable to resolve "../native/build/Release/hello.node" from "app/hello+api.js"
+[0m[31m[1m>[22m[39m[90m 1 |[39m [36mimport[39m { hello } [36mfrom[39m [32m'../native/build/Release/hello.node'[39m[33m;[39m
+ [90m   |[39m                        [31m[1m^[22m[39m
+ [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m [36mfunction[39m [33mGET[39m() {
+ [90m 4 |[39m   [36mreturn[39m [33mResponse[39m[33m.[39mjson({ message[33m:[39m hello()[33m,[39m platform[33m:[39m process[33m.[39mplatform[33m,[39m arch[33m:[39m process[33m.[39march })[33m;[39m[0m
+
+Import stack:
+
+ app/hello+api.js
+ | import "../native/build/Release/hello.node"
+
+
+ | import "<repro>/app/hello+api.js"
+
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundling failed 284ms app/hash+api.js (4 modules)
+Unable to resolve "./bcrypt.wasi.cjs" from "node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js"
+[0m [90m 639 |[39m       candidateFailed [33m=[39m candidateError [33m!==[39m [36mnull[39m
+ [90m 640 |[39m       [36mif[39m ([33m![39mcandidateFailed) {
+[31m[1m>[22m[39m[90m 641 |[39m         wasiBinding [33m=[39m require([32m'./bcrypt.wasi.cjs'[39m)
+ [90m     |[39m                                [31m[1m^[22m[39m
+ [90m 642 |[39m         nativeBinding [33m=[39m wasiBinding
+ [90m 643 |[39m         __napiLoadedBindingTarget [33m=[39m [32m'wasm32-wasi'[39m
+ [90m 644 |[39m         wasiBindingLoaded [33m=[39m [36mtrue[39m[0m
+
+Import stack:
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js
+ | import "./bcrypt.wasi.cjs"
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/index.js
+ | import "./binding"
+
+ app/hash+api.js
+ | import "@node-rs/bcrypt"
+
+
+ | import "<repro>/app/hash+api.js"
+
+λ Bundling failed 11ms app/hello-commonjs+api.js (1 module)
+Unable to resolve "./build/Release/hello.node" from "native/hello-commonjs.cjs"
+[0m[31m[1m>[22m[39m[90m 1 |[39m module[33m.[39mexports [33m=[39m require([32m'./build/Release/hello.node'[39m)[33m;[39m
+ [90m   |[39m                           [31m[1m^[22m[39m
+ [90m 2 |[39m[0m
+
+Import stack:
+
+ native/hello-commonjs.cjs
+ | import "./build/Release/hello.node"
+
+ app/hello-commonjs+api.js
+ | import "../native/hello-commonjs.cjs"
+
+
+ | import "<repro>/app/hello-commonjs+api.js"

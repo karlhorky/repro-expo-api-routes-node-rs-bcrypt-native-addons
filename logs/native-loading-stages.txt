@@ -1,0 +1,13 @@
+These stages include the optional-import fix, with the published Expo CLI native loading behavior
+{"mode": "default", "route": "hello", "status": 500, "error": "Unable to resolve module ../native/build/Release/hello.node"}
+{"mode": "default", "route": "hash", "status": 500, "error": "Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory."}
+{"mode": "default", "route": "native-require", "status": 200, "body": {"hash": "$2b$04$MRKkxKVUP4mheQqN9MPAkOrHqCV4GZWLbFe1Xx4Ec6vOzl6VV.xju", "verified": true}}
+{"mode": "default", "route": "hello-asset", "status": 500, "error": "Unable to resolve module ../native/build/Release/hello.node"}
+{"mode": "sourceExts", "route": "hello", "status": 500, "error": "Failed to bundle API Route: hello+api.js\n\nSyntaxError: <repro>/native/build/Release/hello.node: Unexpected character '\ufffd'. (1:0)\n[binary code frame omitted]"}
+{"mode": "sourceExts", "route": "hash", "status": 500, "error": "Failed to bundle API Route: hash+api.js\n\nSyntaxError: <repro>/node_modules/.pnpm/@node-rs+bcrypt-darwin-arm64@2.0.0/node_modules/@node-rs/bcrypt-darwin-arm64/bcrypt.darwin-arm64.node: Unexpected character '\ufffd'. (1:0)\n[binary code frame omitted]"}
+{"mode": "sourceExts", "route": "native-require", "status": 200, "body": {"hash": "$2b$04$8ZYdhZNsQ9qQtbETCRJa5OBvNtSn6vef/Ku7wqBK1j6wpoIB/Is.q", "verified": true}}
+{"mode": "sourceExts", "route": "hello-asset", "status": 500, "error": "Failed to bundle API Route: hello-asset+api.js\n\nSyntaxError: <repro>/native/build/Release/hello.node: Unexpected character '\ufffd'. (1:0)\n[binary code frame omitted]"}
+{"mode": "assetExts", "route": "hello", "status": 500, "error": "(0 , _nativeBuildReleaseHelloNode.hello) is not a function"}
+{"mode": "assetExts", "route": "hash", "status": 500, "error": "Incompatible bcrypt binary: rebuild or reinstall the matching @node-rs/bcrypt backend"}
+{"mode": "assetExts", "route": "native-require", "status": 200, "body": {"hash": "$2b$04$yUEGMPD5p2grnSIew3SnWOUNx3.anIJFwpKahW6bEMa1S1mRu95sG", "verified": true}}
+{"mode": "assetExts", "route": "hello-asset", "status": 200, "body": {"type": "string", "value": "/assets/?unstable_path=.%2Fnative%2Fbuild%2FRelease/hello.node"}}

@@ -1,0 +1,4 @@
+Vercel deployment: https://repro-expo-native-addons-ap5tcplon-karlhorkys-projects.vercel.app
+{"route": "hello", "status": 200, "body": {"message": "hello from native", "platform": "linux", "arch": "x64"}}
+{"route": "hash", "status": 200, "body": {"hash": "$2b$04$rKhHsaRo78NLRIn7NXFt/ee8xtJQhLILdqQp/esP.rez2pHAXKFge", "verified": true, "platform": "linux", "arch": "x64"}}
+{"route": "hello-commonjs", "status": 200, "body": {"message": "hello from native"}}

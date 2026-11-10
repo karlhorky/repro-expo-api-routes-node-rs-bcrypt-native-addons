@@ -1,0 +1,4 @@
+Moved output, no node_modules in output, both original binaries temporarily renamed
+{"route": "hello", "status": 200, "body": {"message": "hello from native", "platform": "darwin", "arch": "arm64"}}
+{"route": "hash", "status": 200, "body": {"hash": "$2b$04$i1.xuKgvNVTBQHcZ1262F.8DxPHicsGBVSAlvw1o2p7pIez3U1H8u", "verified": true, "platform": "darwin", "arch": "arm64"}}
+{"route": "hello-commonjs", "status": 200, "body": {"message": "hello from native"}}

@@ -1,0 +1,71 @@
+$ expo export --platform web
+Starting Metro Bundler
+
+Server rendering is enabled. Learn more: https://docs.expo.dev/router/web/server-rendering/
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:91546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundled 10295ms node_modules/.pnpm/@expo+router-server@58.0.20_@expo+metro-runtime@58.0.16_expo-constants@58.0.13_expo-fon_5dfb1129698ecce23c62b4a4d045c868/node_modules/@expo/router-server/node/render.js (827 modules)
+Web Bundled 10653ms node_modules/.pnpm/expo-router@58.0.25_17589b3b4d0d0f494751b2c26a54994d/node_modules/expo-router/entry.js (772 modules)
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundling failed 258ms app/hash+api.js (2 modules)
+Unable to resolve "./bcrypt.wasi.cjs" from "node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js"
+[0m [90m 639 |[39m       candidateFailed [33m=[39m candidateError [33m!==[39m [36mnull[39m
+ [90m 640 |[39m       [36mif[39m ([33m![39mcandidateFailed) {
+[31m[1m>[22m[39m[90m 641 |[39m         wasiBinding [33m=[39m require([32m'./bcrypt.wasi.cjs'[39m)
+ [90m     |[39m                                [31m[1m^[22m[39m
+ [90m 642 |[39m         nativeBinding [33m=[39m wasiBinding
+ [90m 643 |[39m         __napiLoadedBindingTarget [33m=[39m [32m'wasm32-wasi'[39m
+ [90m 644 |[39m         wasiBindingLoaded [33m=[39m [36mtrue[39m[0m
+
+Import stack:
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js
+ | import "./bcrypt.wasi.cjs"
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/index.js
+ | import "./binding"
+
+ app/hash+api.js
+ | import "@node-rs/bcrypt"
+
+
+ | import "<repro>/app/hash+api.js"
+
+CommandError: Unable to resolve module ./bcrypt.wasi.cjs from <repro>/node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js:
+
+None of these files exist:
+  * node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/bcrypt.wasi.cjs(.web.ts|.ts|.web.tsx|.tsx|.web.js|.js|.web.jsx|.jsx|.web.json|.json|.web.cjs|.cjs|.web.mjs|.mjs|.web.scss|.scss|.web.sass|.sass|.web.css|.css)
+  * node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/bcrypt.wasi.cjs
+[0m [90m 639 |[39m       candidateFailed [33m=[39m candidateError [33m!==[39m [36mnull[39m
+ [90m 640 |[39m       [36mif[39m ([33m![39mcandidateFailed) {
+[31m[1m>[22m[39m[90m 641 |[39m         wasiBinding [33m=[39m require([32m'./bcrypt.wasi.cjs'[39m)
+ [90m     |[39m                                [31m[1m^[22m[39m
+ [90m 642 |[39m         nativeBinding [33m=[39m wasiBinding
+ [90m 643 |[39m         __napiLoadedBindingTarget [33m=[39m [32m'wasm32-wasi'[39m
+ [90m 644 |[39m         wasiBindingLoaded [33m=[39m [36mtrue[39m[0m
+
+Import stack:
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/binding.js
+ | import "./bcrypt.wasi.cjs"
+
+ node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/index.js
+ | import "./binding"
+
+ app/hash+api.js
+ | import "@node-rs/bcrypt"
+
+
+ | import "<repro>/app/hash+api.js"
+
+[ELIFECYCLE] Command failed with exit code 1.

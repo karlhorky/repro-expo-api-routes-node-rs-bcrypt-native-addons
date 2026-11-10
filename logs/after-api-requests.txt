@@ -1,0 +1,3 @@
+{"route": "hello", "status": 200, "body": {"message": "hello from native", "platform": "darwin", "arch": "arm64"}}
+{"route": "hash", "status": 200, "body": {"hash": "$2b$04$8r36A3/YwWgsh/xOI78G8eorzXoeYMr3WBdmjBCoqR76dUuElJAnK", "verified": true, "platform": "darwin", "arch": "arm64"}}
+{"route": "hello-commonjs", "status": 200, "body": {"message": "hello from native"}}

@@ -1,0 +1,60 @@
+Starting project at <repro>
+Metro is running in CI mode, reloads are disabled. Remove CI=true to enable watch mode.
+Starting Metro Bundler
+
+warning: Bundler cache is empty, rebuilding (this may take a minute)
+Waiting on http://localhost:8125
+
+An update for expo is available: 58.0.17 → ~58.0.23
+9 other packages may need updating. Run npx expo install --check for details.
+Logs for your project will appear below.
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+| (node:3462) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+| (Use `node --trace-warnings ...` to show where the warning was created)
+λ Bundled 480ms app/hello+api.js (1 module)
+
+Metro error: (0 , _nativeBuildReleaseHelloNode.hello) is not a function
+
+Code: hello+api.js
+  2 |
+  3 | export function GET() {
+> 4 |   return Response.json({ message: hello(), platform: process.platform, arch: process.arch });
+    |                                        ^
+  5 | }
+  6 |
+Call Stack
+  GET (app/hello+api.js:4:40)
+  respondAPI (node_modules/.pnpm/expo-server@58.0.6/node_modules/expo-server/build/cjs/vendor/abstract.js:245:32)
+  requestHandler (node_modules/.pnpm/expo-server@58.0.6/node_modules/expo-server/build/cjs/vendor/abstract.js:132:26)
+  async (node_modules/.pnpm/expo-server@58.0.6/node_modules/expo-server/build/cjs/runtime/index.js:70:56)
+  async requestHandler (node_modules/.pnpm/expo-server@58.0.6/node_modules/expo-server/build/cjs/vendor/http.js:56:20)
+  async (node_modules/.pnpm/expo-server@58.0.6/node_modules/expo-server/build/cjs/vendor/http.js:75:30)
+| Dynamic import at line 69: require(process.env.NAPI_RS_NATIVE_LIBRARY_PATH). This module may not work as intended when deployed to a runtime.
+λ Bundled 278ms app/hash+api.js (5 modules)
+
+Metro error: Incompatible bcrypt binary: rebuild or reinstall the matching @node-rs/bcrypt backend
+
+Code: api.cjs
+  12 |   if (binding.BCRYPT_API_VERSION !== 2) {
+  13 |     throw withCode(
+> 14 |       new Error('Incompatible bcrypt binary: rebuild or reinstall the matching @node-rs/bcrypt backend'),
+     |       ^
+  15 |       'ERR_BCRYPT_INCOMPATIBLE_BINARY',
+  16 |     )
+  17 |   }
+Call Stack
+  createBcrypt (node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/api.cjs:14:7)
+  <unknown> (node_modules/.pnpm/@node-rs+bcrypt@2.0.0/node_modules/@node-rs/bcrypt/index.js:2:98)
+  <unknown> (app/hash+api.js:1)
+  Object.<anonymous> (node:child_process)
+λ Bundled 9ms app/native-require+api.js (1 module)
+λ Bundled 6ms app/hello-asset+api.js (1 module)

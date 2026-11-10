@@ -1,0 +1,1 @@
+{"message":"hello from native","hash":"$2b$04$ZbaR0lUE4lX.JQ1H7vcEGe1rg.QZO8ZQjn3JkjAPQO1LKZbJEyyWC","verified":true}

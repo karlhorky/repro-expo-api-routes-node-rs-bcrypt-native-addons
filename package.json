@@ -1,0 +1,37 @@
+{
+  "name": "repro-expo-api-routes-node-rs-bcrypt-native-addons",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "start": "expo start --localhost --port 8123",
+    "export": "expo export --platform web",
+    "serve": "expo serve --port 8124",
+    "build-addon": "node-gyp rebuild --directory native",
+    "control": "node scripts/control.cjs"
+  },
+  "dependencies": {
+    "@node-rs/bcrypt": "2.0.0",
+    "expo": "58.0.17",
+    "expo-constants": "58.0.13",
+    "expo-font": "58.0.9",
+    "expo-linking": "58.0.14",
+    "expo-router": "58.0.25",
+    "expo-server": "58.0.5",
+    "expo-splash-screen": "58.0.11",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-native": "0.88.0",
+    "react-native-safe-area-context": "5.10.1",
+    "react-native-screens": "4.30.0",
+    "react-native-web": "0.21.4"
+  },
+  "packageManager": "pnpm@12.6.0",
+  "devDependencies": {
+    "node-gyp": "13.1.0"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

@@ -1,0 +1,6 @@
+.*
+!.vercelignore
+node_modules
+dist
+native/build
+*.log
